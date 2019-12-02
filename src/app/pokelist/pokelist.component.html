@@ -1,1 +1,8 @@
-<p>hellow</p>
+<div>
+    <input type="button" value="añadir" (click)="loadNext()">
+    <ul class="list-group" *ngFor='let pokemon of pokeStream | async'>
+        <li class="list-group-item">
+            <a>{{pokemon}}</a>
+        </li>
+    </ul>
+</div>

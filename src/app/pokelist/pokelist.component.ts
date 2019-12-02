@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatamonService } from "src/app/datamon.service"
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-pokelist',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokelistComponent implements OnInit {
 
-  constructor() { }
+  public pokeStream: Subject<Array<String>>;
+
+  constructor(private pokelist: DatamonService) {
+  }
 
   ngOnInit() {
+    this.pokeStream = this.pokelist.getPokemons();
+  }
+
+  public loadNext(){
+    console.log('click');
+    this.pokelist.loadPokemons();
   }
 
 }

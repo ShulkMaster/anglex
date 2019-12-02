@@ -7,6 +7,7 @@ import { PokelistComponent } from './pokelist/pokelist.component';
 import { PokedetailsComponent } from './pokedetails/pokedetails.component';
 import { PokepanelComponent } from './pokepanel/pokepanel.component';
 import { NavegationBarComponent } from './navegation-bar/navegation-bar.component';
+import { CardComponent } from './pokelist/card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavegationBarComponent } from './navegation-bar/navegation-bar.componen
     PokelistComponent,
     PokedetailsComponent,
     PokepanelComponent,
-    NavegationBarComponent
+    NavegationBarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
