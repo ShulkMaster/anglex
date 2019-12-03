@@ -1,1 +1,9 @@
-<p>card works!</p>
+<div class="card shadow" style="width: 18rem;">
+    <div class="card-header">ID: {{pokemon.id}}</div>
+    <img [src]="pokemon.sprites.get('front_default')" class="card-img-top" alt="front_default">
+    <div class="card-body">
+        <h5 class="card-title">Name: {{pokemon.name}}</h5>
+        <p class="card-text">{{pokemon.baseExperience}}</p>
+        <a class="btn btn-primary" routerLink="details/1">Details</a>
+    </div>
+</div>

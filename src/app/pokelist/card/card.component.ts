@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Pokemon } from 'src/models/Pokemon';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input() pokemon: Pokemon;
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {  }
+
+  ngOnInit(): void {
+    console.log(this.pokemon.sprites.entries());
   }
 
 }

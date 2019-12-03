@@ -1,8 +1,6 @@
-<div>
-    <input type="button" value="añadir" (click)="loadNext()">
-    <ul class="list-group" *ngFor='let pokemon of pokeStream | async'>
-        <li class="list-group-item">
-            <a>{{pokemon}}</a>
-        </li>
-    </ul>
-</div>
+<input type="button" value="añadir" (click)="loadNext()">
+<ul class="master-grid">
+  <li *ngFor='let pokemon of pokeArray'>
+    <app-card [pokemon]="pokemon"></app-card>
+  </li>
+</ul>
